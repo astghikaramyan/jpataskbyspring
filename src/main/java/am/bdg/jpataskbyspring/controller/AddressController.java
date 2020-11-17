@@ -6,6 +6,7 @@ import am.bdg.jpataskbyspring.dao.AddressDao;
 import am.bdg.jpataskbyspring.entity.AddressEntity;
 import am.bdg.jpataskbyspring.mapper.AddressMapper;
 import am.bdg.jpataskbyspring.service.AddressService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -59,6 +60,7 @@ public class AddressController {
         addressEntityEntity = this.addressService.save(addressEntityEntity);
         return ResponseEntity.ok(this.addressMapper.toDto(addressEntityEntity));
     }
+
     @GetMapping
     public ResponseEntity<Set<AddressDao>> getAddresses() throws SQLException {
         Set<AddressEntity> addressEntityEntity = this.addressService.getAll();

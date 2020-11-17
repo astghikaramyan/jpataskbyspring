@@ -3,6 +3,7 @@ package am.bdg.jpataskbyspring.dao;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import org.springframework.boot.convert.DataSizeUnit;
 
 import java.util.Set;
 
@@ -13,9 +14,11 @@ import java.util.Set;
 @NoArgsConstructor
 @EqualsAndHashCode
 public class AddressDao {
+
     private Long addressId;
 
     private String country;
+
 
     private String city;
 
